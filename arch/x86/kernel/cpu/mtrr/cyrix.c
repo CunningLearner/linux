@@ -149,7 +149,6 @@ static void prepare_set(void)
 	 * Note that wbinvd flushes the TLBs as a side-effect
 	 */
 	cr0 = read_cr0() | X86_CR0_CD;
-	wbinvd();
 	write_cr0(cr0);
 	wbinvd();
 
